@@ -6,10 +6,9 @@ import { type MediaType } from '@/types/media'
 const ROOT = process.cwd()
 const UPLOAD_ROOT = path.join(ROOT, 'public', 'uploads')
 
-export async function DELETE(_req: Request, { params }: { params: { type: string, name: string } }) {
+export async function DELETE(_req: Request, { params }: { params: Promise<{ type: string, name: string }> }) {
   try {
-    const type = params.type as MediaType
-    const name = params.name
+    const { type, name } = await params
     if (!type || !name) {
       return NextResponse.json({ error: 'Parâmetros inválidos' }, { status: 400 })
     }
@@ -29,18 +28,19 @@ function sanitizeName(name: string) {
     .replace(/_{2,}/g, '_')
 }
 
-export async function PATCH(req: Request, { params }: { params: { type: string, name: string } }) {
+export async function PATCH(req: Request, { params }: { params: Promise<{ type: string, name: string }> }) {
   try {
-    const type = params.type as MediaType
-    const oldName = params.name
+    const { type, name: oldName } = await params
     if (!type || !oldName) {
       return NextResponse.json({ error: 'Parâmetros inválidos' }, { status: 400 })
     }
+
     const body = await req.json().catch(() => null) as { newName?: string } | null
     const rawNewName = body?.newName?.trim()
     if (!rawNewName) {
       return NextResponse.json({ error: 'Novo nome é obrigatório' }, { status: 400 })
     }
+
     const dir = path.join(UPLOAD_ROOT, type)
     const oldPath = path.join(dir, oldName)
     const oldExt = path.extname(oldName)

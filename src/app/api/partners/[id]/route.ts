@@ -5,10 +5,10 @@ import type { UpdatePartnerRequest } from '@/types/partner'
 // GET - Buscar parceiro por ID
 export async function GET(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   try {
-    const { id } = params
+    const { id } = await params
     
     const partner = await getPartnerByIdDB(id)
     
@@ -33,10 +33,10 @@ export async function GET(
 // PUT - Atualizar parceiro
 export async function PUT(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   try {
-    const { id } = params
+    const { id } = await params
     const body: UpdatePartnerRequest = await request.json()
 
     const existing = await getPartnerByIdDB(id)
@@ -77,10 +77,10 @@ export async function PUT(
 // DELETE - Remover parceiro
 export async function DELETE(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   try {
-    const { id } = params
+    const { id } = await params
     
     const existing = await getPartnerByIdDB(id)
     if (!existing) {

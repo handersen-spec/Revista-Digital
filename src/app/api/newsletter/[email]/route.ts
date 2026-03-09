@@ -6,10 +6,10 @@ export const revalidate = 0
 
 export async function GET(
   request: NextRequest,
-  { params }: { params: { email: string } }
+  { params }: { params: Promise<{ email: string }> }
 ) {
   try {
-    const { email } = params
+    const { email } = await params
 
     // TODO: Buscar subscrição no banco de dados
     
@@ -36,10 +36,10 @@ export async function GET(
 
 export async function PUT(
   request: NextRequest,
-  { params }: { params: { email: string } }
+  { params }: { params: Promise<{ email: string }> }
 ) {
   try {
-    const { email } = params
+    const { email } = await params
     const body = await request.json()
 
     // TODO: Atualizar subscrição no banco de dados

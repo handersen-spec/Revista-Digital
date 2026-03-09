@@ -5,8 +5,9 @@ import { addConcessionaria } from '@/lib/concessionariasStore'
 export const dynamic = 'force-dynamic'
 export const revalidate = 0
 
-export async function GET(_req: NextRequest, { params }: { params: { id: string } }) {
-  const item = getSolicitacao(params.id)
+export async function GET(_req: NextRequest, { params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params
+  const item = getSolicitacao(id)
   if (!item) return NextResponse.json({ success: false, error: 'Not Found' }, { status: 404 })
   return NextResponse.json({ success: true, data: item })
 }
@@ -19,10 +20,11 @@ function verificaConcessionariaFromSolicitacao(s: any): boolean {
   return okEmail && okEmpresa && okTelefone
 }
 
-export async function PUT(request: NextRequest, { params }: { params: { id: string } }) {
+export async function PUT(request: NextRequest, { params }: { params: Promise<{ id: string }> }) {
   try {
+    const { id } = await params
     const updates = await request.json()
-    const updated = updateSolicitacao(params.id, updates)
+    const updated = updateSolicitacao(id, updates)
     if (!updated) return NextResponse.json({ success: false, error: 'Not Found' }, { status: 404 })
 
     // Ao resolver solicitação de cadastro de concessionária, criar a concessionária
@@ -85,8 +87,9 @@ export async function PUT(request: NextRequest, { params }: { params: { id: stri
   }
 }
 
-export async function DELETE(_req: NextRequest, { params }: { params: { id: string } }) {
-  const ok = deleteSolicitacao(params.id)
+export async function DELETE(_req: NextRequest, { params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params
+  const ok = deleteSolicitacao(id)
   if (!ok) return NextResponse.json({ success: false, error: 'Not Found' }, { status: 404 })
   return NextResponse.json({ success: true })
 }

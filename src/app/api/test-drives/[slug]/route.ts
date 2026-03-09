@@ -6,10 +6,10 @@ export const revalidate = 0
 
 export async function GET(
   request: NextRequest,
-  { params }: { params: { slug: string } }
+  { params }: { params: Promise<{ slug: string }> }
 ) {
   try {
-    const { slug } = params
+    const { slug } = await params
     if (!slug) {
       return NextResponse.json({ error: 'Slug inválido' }, { status: 400 })
     }
@@ -72,10 +72,10 @@ function normalizeStatusToDb(status: any): 'draft' | 'published' | 'scheduled' {
 
 export async function PUT(
   request: NextRequest,
-  { params }: { params: { slug: string } }
+  { params }: { params: Promise<{ slug: string }> }
 ) {
   try {
-    const { slug } = params
+    const { slug } = await params
     if (!slug) return NextResponse.json({ ok: false, error: 'Slug inválido' }, { status: 400 })
 
     const body = await request.json()

@@ -71,20 +71,20 @@ const Header = memo(() => {
           {/* Logo */}
           <Link 
             href="/" 
-            className="flex items-center space-x-3 hover-scale focus-visible-enhanced keyboard-navigation" 
+            className="flex items-center hover-scale focus-visible-enhanced keyboard-navigation" 
             style={{ borderRadius: 'var(--radius-md)' }}
             aria-label="Auto Prestige - Página inicial da revista digital"
           >
             <Image
               src="/assets/images/auto-prestige-logo.svg"
               alt="Auto Prestige"
-              width={180}
-              height={45}
-              className="w-48 h-auto object-contain"
+              width={200}
+              height={55}
+              className="w-auto h-20 object-contain -ml-2"
               priority
             />
             <div className="flex flex-col">
-              <div className="hidden sm:block text-[10px] uppercase tracking-widest font-light -mt-1 ml-1" style={{ color: '#ffffff', opacity: 0.8 }}>
+              <div className="hidden sm:block text-[10px] uppercase tracking-widest font-light mt-1 -ml-4" style={{ color: '#ffffff', opacity: 0.9, letterSpacing: '0.2em' }}>
                 Revista Digital
               </div>
             </div>

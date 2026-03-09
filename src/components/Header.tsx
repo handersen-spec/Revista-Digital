@@ -78,12 +78,13 @@ const Header = memo(() => {
             <Image
               src="/assets/images/auto-prestige-logo.svg"
               alt="Auto Prestige"
-              width={120}
-              height={120}
-              className="w-30 h-30 object-contain"
+              width={180}
+              height={45}
+              className="w-48 h-auto object-contain"
+              priority
             />
             <div className="flex flex-col">
-              <div className="hidden sm:block text-caption -mt-1" style={{ color: '#ffffff' }}>
+              <div className="hidden sm:block text-[10px] uppercase tracking-widest font-light -mt-1 ml-1" style={{ color: '#ffffff', opacity: 0.8 }}>
                 Revista Digital
               </div>
             </div>

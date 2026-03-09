@@ -78,9 +78,9 @@ const Header = memo(() => {
             <Image
               src="/assets/images/auto-prestige-logo.svg"
               alt="Auto Prestige"
-              width={200}
+              width={190}
               height={55}
-              className="w-auto h-20 object-contain -ml-2"
+              className="w-auto h-18 object-contain -ml-2"
               priority
             />
             <div className="flex flex-col">

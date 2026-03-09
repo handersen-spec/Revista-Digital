@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useRef, useCallback, useEffect } from 'react'
-import { Upload, X, Image, Video, File, Trash2, Eye, Download, Search } from 'lucide-react'
+import { Upload, X, Image as ImageIcon, Video, File as FileIcon, Trash2, Eye, Download, Search } from 'lucide-react'
 
 interface MediaFile {
   id: string
@@ -211,9 +211,9 @@ const MediaUpload: React.FC<MediaUploadProps> = ({
 
   // Obter ícone do tipo de arquivo
   const getFileIcon = (type: string) => {
-    if (type.startsWith('image/')) return <Image className="w-4 h-4" />
+    if (type.startsWith('image/')) return <ImageIcon className="w-4 h-4" />
     if (type.startsWith('video/')) return <Video className="w-4 h-4" />
-    return <File className="w-4 h-4" />
+    return <FileIcon className="w-4 h-4" />
   }
 
   if (!isOpen) return null
@@ -358,7 +358,7 @@ const MediaUpload: React.FC<MediaUploadProps> = ({
 
           {filteredFiles.length === 0 && (
             <div className="text-center py-12">
-              <Image className="w-12 h-12 text-gray-300 mx-auto mb-4" />
+              <ImageIcon className="w-12 h-12 text-gray-300 mx-auto mb-4" />
               <p className="text-gray-500">Nenhum arquivo encontrado</p>
             </div>
           )}

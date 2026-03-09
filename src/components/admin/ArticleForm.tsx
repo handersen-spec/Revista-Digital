@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { X, Upload, Image, Save, Eye, Calendar, Tag, User, FileText, AlertCircle, Settings, Car } from 'lucide-react'
+import { X, Upload, Image as ImageIcon, Save, Eye, Calendar, Tag, User, FileText, AlertCircle, Settings, Car } from 'lucide-react'
 import MediaUpload from './MediaUpload'
 import { slugify, ensureUniqueSlug } from '@/lib/slugify'
 

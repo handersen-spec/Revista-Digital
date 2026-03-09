@@ -1,0 +1,82 @@
+[
+  {
+    "id": "0f0da8c0-16da-4e8e-a8e1-6d65289ba30d",
+    "nome": "DAIMIC",
+    "marca": "Indefinida",
+    "endereco": "Avenida Deolinda Rodrigues, KM 13",
+    "cidade": "Luanda",
+    "provincia": "Luanda",
+    "telefone": "+244 972 419 911",
+    "email": "comercial@daimic.com",
+    "website": null,
+    "horarioFuncionamento": {
+      "segunda": "08:00 - 18:00",
+      "terca": "08:00 - 18:00",
+      "quarta": "08:00 - 18:00",
+      "quinta": "08:00 - 18:00",
+      "sexta": "08:00 - 18:00",
+      "sabado": "09:00 - 13:00",
+      "domingo": "Fechado"
+    },
+    "coordenadas": {
+      "latitude": 0,
+      "longitude": 0
+    },
+    "servicos": [
+      "Vendas",
+      "Pós-vendas",
+      "Peças",
+      "Seguro"
+    ],
+    "avaliacoes": {
+      "media": 0,
+      "total": 0
+    },
+    "imagens": [
+      "/uploads/image/1759621691694_Daimic.svg"
+    ],
+    "destaque": false,
+    "verificada": true,
+    "dataAtualizacao": "2025-10-04T23:48:41.431Z"
+  },
+  {
+    "id": "567d00ca-263b-445d-821b-6d0e78dbe29f",
+    "nome": "CFAO Motors ",
+    "marca": "Indefinida",
+    "endereco": "568W+222, R. N'Gola M'Bandi, Luanda",
+    "cidade": "Luanda",
+    "provincia": "Luanda",
+    "telefone": "+244 923 190 809",
+    "email": "helpdesk-angola@cfao.com",
+    "website": null,
+    "horarioFuncionamento": {
+      "segunda": "08:00 - 18:00",
+      "terca": "08:00 - 18:00",
+      "quarta": "08:00 - 18:00",
+      "quinta": "08:00 - 18:00",
+      "sexta": "08:00 - 18:00",
+      "sabado": "09:00 - 13:00",
+      "domingo": "Fechado"
+    },
+    "coordenadas": {
+      "latitude": 0,
+      "longitude": 0
+    },
+    "servicos": [
+      "Vendas",
+      "Pós-vendas",
+      "Peças",
+      "Oficina"
+    ],
+    "avaliacoes": {
+      "media": 0,
+      "total": 0
+    },
+    "imagens": [
+      "/uploads/image/1759621164542_logo.png"
+    ],
+    "destaque": false,
+    "verificada": true,
+    "dataAtualizacao": "2025-10-04T23:40:06.846Z"
+  }
+]

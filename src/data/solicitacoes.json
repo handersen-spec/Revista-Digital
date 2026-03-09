@@ -1,0 +1,197 @@
+[
+  {
+    "id": "9aedf086-70b6-4f9e-9faa-05fc4d640fb3",
+    "status": "resolvida",
+    "criadoEm": "2025-10-04T23:48:12.377Z",
+    "atualizadoEm": "2025-10-04T23:48:41.428Z",
+    "tipo": "parceria",
+    "titulo": "Cadastro de Concessionária: DAIMIC",
+    "descricao": "Luanda, Luanda\nAvenida Deolinda Rodrigues, KM 13\nTeste de Campo",
+    "nomeRequerente": "Viana Sede – Dep. Comercial",
+    "emailRequerente": "comercial@daimic.com",
+    "telefoneRequerente": "+244 972 419 911",
+    "empresa": "DAIMIC",
+    "prioridade": "media",
+    "categoria": "concessionaria_cadastro",
+    "anexos": [],
+    "notas": [],
+    "tags": [
+      "cadastro_concessionaria"
+    ],
+    "dadosConcessionaria": {
+      "endereco": "Avenida Deolinda Rodrigues, KM 13",
+      "cidade": "Luanda",
+      "provincia": "Luanda",
+      "telefone": "+244 972 419 911",
+      "coordenadas": {
+        "latitude": 0,
+        "longitude": 0
+      },
+      "horarios": {
+        "segunda": "08:00 - 18:00",
+        "terca": "08:00 - 18:00",
+        "quarta": "08:00 - 18:00",
+        "quinta": "08:00 - 18:00",
+        "sexta": "08:00 - 18:00",
+        "sabado": "09:00 - 13:00",
+        "domingo": "Fechado"
+      },
+      "servicos": [
+        "Vendas",
+        "Pós-vendas",
+        "Peças",
+        "Seguro"
+      ],
+      "imagens": [
+        "/uploads/image/1759621691694_Daimic.svg"
+      ],
+      "descricao": "Teste de Campo"
+    }
+  },
+  {
+    "id": "bb6ddd03-3ff2-4e1d-9caa-7ed333d35b95",
+    "status": "resolvida",
+    "criadoEm": "2025-10-04T23:39:30.368Z",
+    "atualizadoEm": "2025-10-04T23:40:06.845Z",
+    "tipo": "parceria",
+    "titulo": "Cadastro de Concessionária: CFAO Motors ",
+    "descricao": "Luanda, Luanda\n568W+222, R. N'Gola M'Bandi, Luanda",
+    "nomeRequerente": "Helpdesk-angola",
+    "emailRequerente": "helpdesk-angola@cfao.com",
+    "telefoneRequerente": "+244 923 190 809",
+    "empresa": "CFAO Motors ",
+    "prioridade": "media",
+    "categoria": "concessionaria_cadastro",
+    "anexos": [],
+    "notas": [],
+    "tags": [
+      "cadastro_concessionaria"
+    ],
+    "dadosConcessionaria": {
+      "endereco": "568W+222, R. N'Gola M'Bandi, Luanda",
+      "cidade": "Luanda",
+      "provincia": "Luanda",
+      "telefone": "+244 923 190 809",
+      "coordenadas": {
+        "latitude": 0,
+        "longitude": 0
+      },
+      "horarios": {
+        "segunda": "08:00 - 18:00",
+        "terca": "08:00 - 18:00",
+        "quarta": "08:00 - 18:00",
+        "quinta": "08:00 - 18:00",
+        "sexta": "08:00 - 18:00",
+        "sabado": "09:00 - 13:00",
+        "domingo": "Fechado"
+      },
+      "servicos": [
+        "Vendas",
+        "Pós-vendas",
+        "Peças",
+        "Oficina"
+      ],
+      "imagens": [
+        "/uploads/image/1759621164542_logo.png"
+      ],
+      "descricao": ""
+    }
+  },
+  {
+    "id": "ed3c5f37-ff42-4733-bc4f-c9ff4ed48420",
+    "status": "resolvida",
+    "criadoEm": "2025-10-04T02:21:50.889Z",
+    "atualizadoEm": "2025-10-04T02:43:03.794Z",
+    "tipo": "parceria",
+    "titulo": "Cadastro de Concessionária: Hyunday",
+    "descricao": "Luanda, Luanda\nSamba\nOficina a hyundai",
+    "nomeRequerente": "Handersen Venancio",
+    "emailRequerente": "handersen.venancio@gmail.com",
+    "telefoneRequerente": "+244 931 270 700",
+    "empresa": "Hyunday",
+    "prioridade": "media",
+    "categoria": "concessionaria_cadastro",
+    "anexos": [],
+    "notas": [],
+    "tags": [
+      "cadastro_concessionaria"
+    ],
+    "dadosConcessionaria": {
+      "endereco": "Samba",
+      "cidade": "Luanda",
+      "provincia": "Luanda",
+      "telefone": "+244 931 270 700",
+      "coordenadas": {
+        "latitude": 0,
+        "longitude": 0
+      },
+      "horarios": {
+        "segunda": "08:00 - 18:00",
+        "terca": "08:00 - 18:00",
+        "quarta": "08:00 - 18:00",
+        "quinta": "08:00 - 18:00",
+        "sexta": "08:00 - 18:00",
+        "sabado": "09:00 - 13:00",
+        "domingo": "Fechado"
+      },
+      "servicos": [
+        "Vendas",
+        "Peças",
+        "Seguro",
+        "Oficina"
+      ],
+      "imagens": [],
+      "descricao": "Oficina a hyundai"
+    }
+  },
+  {
+    "id": "c6e8a668-88ac-4de7-ba17-13d7094e4941",
+    "status": "resolvida",
+    "criadoEm": "2025-10-03T20:46:28.009Z",
+    "atualizadoEm": "2025-10-03T20:47:34.610Z",
+    "tipo": "parceria",
+    "titulo": "Cadastro de Concessionária: Toyota CFAO",
+    "descricao": "lUANDA, lUANDA\nBAIRRO ROCHA\nepefeprekjfmepfiefefaf",
+    "nomeRequerente": "Gilvander Handersen venancio bernardo",
+    "emailRequerente": "gilvanderbernardo.ghvb@gmail.com",
+    "telefoneRequerente": "931270700",
+    "empresa": "Toyota CFAO",
+    "prioridade": "media",
+    "categoria": "concessionaria_cadastro",
+    "anexos": [],
+    "notas": [],
+    "tags": [
+      "cadastro_concessionaria"
+    ],
+    "dadosConcessionaria": {
+      "endereco": "BAIRRO ROCHA",
+      "cidade": "lUANDA",
+      "provincia": "lUANDA",
+      "telefone": "931270700",
+      "coordenadas": {
+        "latitude": 0,
+        "longitude": 0
+      },
+      "horarios": {
+        "segunda": "08:00 - 18:00",
+        "terca": "08:00 - 18:00",
+        "quarta": "08:00 - 18:00",
+        "quinta": "08:00 - 18:00",
+        "sexta": "08:00 - 18:00",
+        "sabado": "09:00 - 13:00",
+        "domingo": "Fechado"
+      },
+      "servicos": [
+        "Vendas",
+        "Peças",
+        "Oficina",
+        "Funilaria",
+        "Seguro"
+      ],
+      "imagens": [
+        "/uploads/image/dealer_1759524387406_0.webp"
+      ],
+      "descricao": "epefeprekjfmepfiefefaf"
+    }
+  }
+]

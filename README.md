@@ -14,7 +14,7 @@ pnpm dev
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3001](http://localhost:3001) with your browser to see the result.
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
@@ -34,3 +34,21 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## Banco de dados (Postgres)
+
+Este projeto está pronto para conectar em Postgres sem criar tabelas por padrão.
+
+- Variáveis de ambiente: defina `DATABASE_URL` em `.env.local` (já incluído):
+  `postgresql://autoprestige:autoprestige@localhost:5432/autoprestige`
+
+- Subir Postgres (opções):
+  - Docker Compose (arquivo `docker-compose.yml` já incluso):
+    `docker compose up -d postgres`
+  - Postgres nativo: instale e execute o servidor localmente.
+
+- Criar apenas a base de dados (sem tabelas):
+  - Com `psql` disponível:
+    `psql -h localhost -U autoprestige -d postgres -f scripts/db/create-db.sql`
+
+Nenhuma tabela é criada nesta configuração inicial. Aguarde instruções para modelagem e migrações.

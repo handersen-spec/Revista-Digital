@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect, useRef, Suspense } from 'react'
 import { useSearchParams } from 'next/navigation'
 import { useMemo } from 'react'
 import { useArtigos } from '@/hooks/useArtigos'
@@ -58,7 +58,7 @@ interface ContentItem {
   featured: boolean
 }
 
-const ContentManagement = () => {
+const ContentManagementContent = () => {
   const searchParams = useSearchParams()
   const tabParam = searchParams.get('tab')
   
@@ -1296,5 +1296,11 @@ const ContentManagement = () => {
     </div>
   )
 }
+
+const ContentManagement = () => (
+  <Suspense fallback={<div>Carregando conteúdo...</div>}>
+    <ContentManagementContent />
+  </Suspense>
+)
 
 export default ContentManagement

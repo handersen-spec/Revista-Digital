@@ -67,10 +67,10 @@ export async function PUT(
 
 export async function DELETE(
   request: NextRequest,
-  { params }: { params: { email: string } }
+  { params }: { params: Promise<{ email: string }> }
 ) {
   try {
-    const { email } = params
+    const { email } = await params
 
     // TODO: Cancelar subscrição no banco de dados
     

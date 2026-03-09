@@ -403,7 +403,7 @@ const PublicidadeAdmin = () => {
                             <div className="text-sm text-gray-500">{anuncio?.campanha?.nome || '—'}</div>
                           </td>
                           <td className="px-6 py-4 whitespace-nowrap">
-                            {(() => { const ativo = anuncio?.configuracao?.ativo ?? anuncio?.ativo ?? false; return (
+                            {(() => { const ativo = anuncio?.configuracao?.ativo ?? false; return (
                               <span className={`inline-flex px-2 py-1 text-xs font-semibold rounded-full ${getStatusColor(ativo)}`}>
                                 {ativo ? 'Ativo' : 'Pausado'}
                               </span>

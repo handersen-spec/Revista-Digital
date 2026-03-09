@@ -12,7 +12,7 @@ import { useVideosDestaque } from '@/hooks/useVideos'
 import { useNoticiasDestaque } from '@/hooks/useNoticias'
 
 // Carregamento dinâmico de componentes (melhor compatibilidade com Next)
-const Advertisement = dynamic(() => import('@/components/Advertisement'), { ssr: false, suspense: true })
+const Advertisement = dynamic(() => import('@/components/Advertisement'), { ssr: false })
 
 export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(0)
@@ -38,12 +38,12 @@ export default function Home() {
     .slice(0, 3)
   
   // Vídeos em destaque (primeiros 2, somente publicados)
-  const videosDestaque = ((videosApi || []) as Video[])
+  const videosDestaque = ((videosApi || []) as unknown as Video[])
     .filter((v) => v?.status === 'published' || v?.status === undefined)
     .slice(0, 2)
   
   // Notícias em destaque publicadas (primeiros 3)
-  const noticiasDestaque = ((noticiasApi || []) as Noticia[])
+  const noticiasDestaque = ((noticiasApi || []) as unknown as Noticia[])
     .filter((n) => n?.status === 'published' || n?.status === undefined)
     .slice(0, 3)
 
@@ -550,8 +550,8 @@ export default function Home() {
                   <p className="text-slate-600 text-sm mb-3 line-clamp-2 leading-relaxed">
                     {video.descricao}
                   </p>
-                  <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center text-xs text-slate-500 gap-1 sm:gap-0" aria-label={`Vídeo do canal ${video.canal}, ${video.visualizacoes} visualizações`}>
-                    <span>{video.canal}</span>
+                  <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center text-xs text-slate-500 gap-1 sm:gap-0" aria-label={`Vídeo do canal ${(video as any).canal}, ${video.visualizacoes} visualizações`}>
+                    <span>{(video as any).canal}</span>
                     <span>{video.visualizacoes} visualizações</span>
                   </div>
                   <div className="text-xs text-slate-500 mt-1">

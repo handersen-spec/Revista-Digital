@@ -171,10 +171,10 @@ export async function PUT(
 
 export async function DELETE(
   request: NextRequest,
-  { params }: { params: { slug: string } }
+  { params }: { params: Promise<{ slug: string }> }
 ) {
   try {
-    const { slug } = params
+    const { slug } = await params
     if (!slug) {
       return NextResponse.json({ success: false, message: 'Slug inválido' }, { status: 400 })
     }

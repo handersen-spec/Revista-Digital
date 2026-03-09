@@ -96,19 +96,19 @@ const EngagementAnalytics = () => {
       } else {
         const headers = ['tipo','identificador','valor1','valor2','valor3','percentual']
         const rows: any[][] = []
-        rows.push(['overview','total', engagementData.overview.totalInteractions, engagementData.overview.totalComments, engagementData.overview.totalShares, engagementData.overview.avgEngagementRate])
+        rows.push(['overview','total', engagementData.overview.totalInteractions, engagementData.overview.totalComments, engagementData.overview.totalShares, engagementData.overview.avgEngagementRate]);
         (engagementData.contentTypes || []).forEach((ct: any) => {
           rows.push(['tipo_conteudo', ct.type, ct.interactions ?? 0, '', '', ct.engagementRate ?? 0])
-        })
+        });
         (engagementData.topContent || []).forEach((tc: any) => {
           rows.push(['conteudo_top', tc.title, tc.views ?? 0, tc.likes ?? 0, tc.comments ?? 0, tc.engagementRate ?? 0])
-        })
+        });
         (engagementData.userBehavior?.scrollDepth || []).forEach((sd: any) => {
           rows.push(['scroll', sd.range, sd.users ?? 0, '', '', sd.percentage ?? 0])
-        })
+        });
         (engagementData.userBehavior?.clickHeatmap || []).forEach((ch: any) => {
           rows.push(['click', ch.element, ch.clicks ?? 0, '', '', ch.percentage ?? 0])
-        })
+        });
         (engagementData.socialEngagement || []).forEach((se: any) => {
           rows.push(['social', se.platform, se.shares ?? 0, se.likes ?? 0, se.comments ?? 0, se.reach ?? 0])
         })

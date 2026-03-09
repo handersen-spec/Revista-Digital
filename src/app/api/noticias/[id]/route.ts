@@ -133,10 +133,10 @@ export async function PUT(
 
 export async function DELETE(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   try {
-    const { id } = params
+    const { id } = await params
     const sql = `DELETE FROM noticias WHERE slug = $1 OR CAST(id AS TEXT) = $1 RETURNING id`
     const { rows } = await query(sql, [id])
     if (!rows.length) {
